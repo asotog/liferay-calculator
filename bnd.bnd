@@ -1,0 +1,9 @@
+Bundle-Name: Calculator
+Bundle-SymbolicName: com.rivetlogic.app
+Bundle-Version: 1.0.1
+Bundle-Description: Liferay Calculator Portlet with the basic math and memory functions.
+Bundle-Category: category.tools
+Bundle-Copyright: Rivet Logic Corporation
+Bundle-License: GPLv3
+Bundle-Vendor: Rivet Logic Corporation
+Bundle-DocURL: http://wiki.rivetlogic.com/display/LRA/Calculator
