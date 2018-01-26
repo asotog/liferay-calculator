@@ -9,19 +9,24 @@ button {
 }
 
 .calculator-portlet input[type="text"].calculator-display {
-    font-size: 1.3em;
-    padding: 0.5em;
-    text-align: right;
     width: 90%;
-    height: 16px;
+    height: 30px;
+    padding: 0 0.5em;
+    line-height: 1;
+    font-size: 1.3em;
+    text-align: right;
+    border: none;
 }
 
 .calculator-portlet .calculator-memory {
 	font-size: 0.8em;
 	padding: 0.5em 0.3em;
 	line-height: 10px;
+    background: #FFF;
 }
-
+.ie .calculator-portlet .calculator-memory {
+    max-width: 20%;
+}
 .calculator-portlet .calculator-buttons {
 	border: 1px #CCC solid;
 	width: 90%;
@@ -30,19 +35,14 @@ button {
 	border-radius: 0.6em;
 
 }
+.calculator-portlet .calculator-numbers {
+    float: left;
+    width: 76%;
+}
 
 .calculator-portlet .calculator-buttons button {
     margin: 2px;
     border-radius: 20px;
-    @include respond-to(phone, tablet)  {
-        display: inline-block;
-        width: auto;
-    }
-}
-
-.calculator-portlet .calculator-numbers {
-    float: left;
-    width: 76%;
 }
 
 .memory-btns{
@@ -98,4 +98,12 @@ button {
  
 .clearfix {
     display: inline-block;
+}
+
+
+@media (max-width: 979px) {
+    .calculator-portlet .calculator-buttons button {
+        display: inline-block;
+        width: auto;
+    }
 }
