@@ -19,13 +19,11 @@ button {
 }
 
 .calculator-portlet .calculator-memory {
+    max-width: 20%;
 	font-size: 0.8em;
-	padding: 0.5em 0.3em;
+	padding: 0.5em 0.2em;
 	line-height: 10px;
     background: #FFF;
-}
-.ie .calculator-portlet .calculator-memory {
-    max-width: 20%;
 }
 .calculator-portlet .calculator-buttons {
 	border: 1px #CCC solid;
