@@ -98,7 +98,7 @@ AUI().ready('event-delegate', 'event-key', 'event', function(A) {
 		
 		if(resetDisplay){
 			number1 = number2;
-			display.value = number2 =  val;
+			display.value = number2 = val;
 			resetDisplay = false;
 		}
 		else{			
@@ -129,8 +129,13 @@ AUI().ready('event-delegate', 'event-key', 'event', function(A) {
 	
 	function processResult(){	
 		resetDisplay = resultProcessed = true;
-		
-		var result = evalOperation(number1, currentOP, number2);	
+		var result = 0;
+
+		if(currentOP != "") {
+			result = evalOperation(number1, currentOP, number2);
+		} else {
+			result = number2;
+		}
 		
 		if(result !== ERROR_MSG){		
 			display.value = number1 = result;
@@ -195,9 +200,8 @@ AUI().ready('event-delegate', 'event-key', 'event', function(A) {
 		return (pointDivision.length > 1) ? intergerResult + '.' + pointDivision[1] : intergerResult; 
 	}
 	
-	function evalOperation(n1, op, n2){	
+	function evalOperation(n1, op, n2){
 		if(op !== OPERATIONS.DIVISION.value || n2 !== RESET_VALUE){
-	
 			var result = RESET_VALUE;
 			
 			try{
