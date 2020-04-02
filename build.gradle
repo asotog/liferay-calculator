@@ -12,8 +12,6 @@ buildscript {
 	}
 }
 
-//apply plugin: "com.liferay.plugin"
-
 dependencies {
 	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
 	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib"
